@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prathamesh Jadhav — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="dark-mode">
+
+  <!-- Header - Sticky navigation -->
+  <header>
+    <div class="container">
+      <a class="brand" href="#home">Prathamesh Jadhav</a>
+      <button id="navToggle" class="nav-toggle" aria-controls="siteNav" aria-expanded="false">☰</button>
+      <nav id="siteNav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- Top controls - Moved here for better mobile control -->
+        <div class="top-controls">
+          <label class="theme-switch" title="Toggle theme">
+            <!-- Initial state set by JS based on user preference -->
+            <input id="themeToggle" type="checkbox">
+            <span class="slider"></span>
+          </label>
+          <a class="github-cta btn ghost" href="https://github.com/PrathameshJadhav30" target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero container">
+    <div class="hero-left">
+      <img src="assets/images/profilepic.jpeg" alt="Prathamesh Jadhav's professional headshot" class="avatar"
+        loading="lazy">
+    </div>
+    <div class="hero-right">
+      <p class="sub-heading">Hello, I'm</p>
+      <h1>Prathamesh Arvind Jadhav</h1>
+      <p class="sub-title">B.Tech (AI & DS) • Java Full Stack • AI/ML & Data Enthusiast</p>
+      <p class="type-wrap"><span id="typed" class="typed-text"></span></p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn ghost" href="01-Prathamesh_Java_Full_Stack.pdf" download type="application/pdf">Download
+          Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section container">
+    <h2>About Me</h2>
+    <div class="about-grid">
+      <div>
+        <!-- Professional Summary -->
+        <p class="lead-text">
+          B.Tech graduate in Artificial Intelligence & Data Science with strong expertise in Core Java, Python, SQL,
+          C++,
+          and Data Structures & Algorithms (DSA). Skilled in Java Full Stack development, AI/ML engineering, and
+          cloud-based
+          solutions, with hands-on experience in automation, data preprocessing, and database optimization.
+          Through internships in fintech and IT, I engineered automation tools, optimized SQL systems, and developed
+          scalable full-stack applications. Recognized for academic excellence and consistent coding discipline,
+          I bring problem-solving ability, adaptability, and a passion for delivering efficient and impactful
+          software solutions.
+        </p>
+
+
+        <!-- Quick Info -->
+        <ul class="quick-info">
+          <li><strong>Education:</strong><br>
+            <strong>B.Tech (AI & DS)</strong> – Annasaheb Dange College of Engineering & Technology, Ashta (CPI: 9.15,
+            2026)<br>
+            <strong>HSC</strong> – J.S. Pomani Jr. College of Science, Belanki (71.5%, 2022)<br>
+            <strong>SSC</strong> – New English School, Belanki (86%, 2020)
+          </li>
+          <li><strong>Domains:</strong> Java Full Stack, AI/ML Engineering, Data Engineering, MERN Stack, Data Analysis
+          </li>
+          <li><strong>Interests:</strong> Cloud Computing, Automation, Performance Optimization, AI/ML, System Design,
+            Architectures</li>
+        </ul>
+
+        <!-- Experience -->
+        <h2>Experience</h2>
+        <ul class="experience">
+
+          <li>
+            <strong class="company-name">Software Developer Intern – Nandani Sahakari Bank Ltd, Nandani (Feb 2025 – May
+              2025)</strong><br>
+            <ul class="experience-details">
+              <li><b>►</b> Engineered an automated Transaction Sync Tool to reconcile HDFC and CBS bank statements,
+                reducing manual workload by <b>90%</b> and halving reconciliation time.</li>
+              <li><b>►</b> Implemented intelligent UTR extraction and rule-based matching logic, improving transaction
+                verification accuracy by <b>85%</b>.</li>
+              <li><b>►</b> Gained hands-on experience with <b>Java, SQL, and banking automation systems</b>.</li>
+            </ul>
+          </li>
+          <br>
+
+          <li>
+            <strong class="company-name">SQL Development Intern – Tecspeak IT Solution, Sangli (Jun 2024 – Jul
+              2024)</strong><br>
+            <ul class="experience-details">
+              <li><b>►</b> Refactored SQL Server databases, optimizing queries and boosting execution speed by
+                <b>60%</b> for critical business operations.
+              </li>
+              <li><b>►</b> Collaborated with a <b>5-member team</b> to improve database integrity, reduce redundancy,
+                and enhance scalability.</li>
+              <li><b>►</b> Worked extensively with <b>SQL Server, normalization, indexing, and performance tuning</b>.
+              </li>
+            </ul>
+          </li>
+          <br>
+
+          <li>
+            <strong class="company-name">Green Skills Using AI – Edunet Foundation (Nov 2024 – Dec 2024)</strong><br>
+            <ul class="experience-details">
+              <li><b>►</b> Developed a machine learning model for <b>Air Quality Index (AQI) prediction</b> by analyzing
+                over 50,000+ environmental data points.</li>
+              <li><b>►</b> Improved AQI prediction accuracy by <b>15%</b> through advanced preprocessing and feature
+                engineering.</li>
+              <li><b>►</b> Applied <b>Python, Pandas, Scikit-learn, and ML modeling techniques</b> for
+                sustainability-focused solutions.</li>
+            </ul>
+          </li>
+          <br>
+
+          <li>
+            <strong class="company-name">Java Intern – Vaidsys Technologies (Jun 2025 – Jul 2025)</strong><br>
+            <ul class="experience-details">
+              <li><b>►</b> Designed and developed an <b>Inventory Management System</b> using Core Java, JDBC, and
+                MySQL, improving stock accuracy by <b>40%</b>.</li>
+              <li><b>►</b> Integrated <b>user authentication and multithreading</b> for handling concurrent updates,
+                reducing data latency by <b>30%</b>.</li>
+              <li><b>►</b> Worked in <b>Java Full Stack environment</b>, strengthening backend and database integration
+                skills.</li>
+            </ul>
+          </li>
+
+        </ul>
+
+
+
+
+        <!-- Achievements -->
+        <h2>Achievements</h2>
+        <ul class="achievements">
+          <li>🏆 <strong>Academic Topper:</strong> First | Second | Third Year</li>
+          <li>🏆 <strong>LeetCode Streak:</strong> 290 Day Problem-Solving Excellence</li>
+          <li>🏆 <strong>GitHub Streak:</strong> 298 Days of Continuous Coding</li>
+          <li>🏆 <strong>Codeclash Hackathon:</strong> Secured Top 221 Rank</li>
+          <li>🏆 <strong>3rd Prize:</strong> ZEST’25 Kabaddi, Pune</li>
+          <li>🏆 <strong>4th Prize:</strong> State-Level Kabaddi, Pune</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="section container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <article class="card project-card">
+        <img src="assets/images/AutoDataPreProcessing.png" alt="Screenshot of AutoPrep Smart Data Preprocessing Tool"
+          class="card-img" loading="lazy">
+        <div class="card-body">
+          <h3>AutoPrep — Smart Data Preprocessing Tool</h3>
+          <p>Python Streamlit tool automating data cleaning, encoding, scaling, outlier detection, and feature
+            engineering to boost ML model accuracy.</p>
+            <br>
+          <ul class="tags">
+            <li>Python</li>
+            <li>Data Analysis</li>
+            <li>Data Preprocessing</li>
+            <li>Python Libraries</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost"
+              href="https://github.com/PrathameshJadhav30/SmartPrep-Hub-Transforming-Raw-Data-into-ML-Ready-Gold"
+              target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card project-card">
+        <img src="assets/images/RealTimeWeather.png" alt="Screenshot of Real-Time Weather Forecasting" class="card-img"
+          loading="lazy">
+        <div class="card-body">
+          <h3>Real-Time Weather Forecasting</h3>
+          <p>Full-stack Java application using Spring Boot, JPA, MySQL, HTML, CSS, and JS for real-time weather
+            forecasts with API integration.</p> <br>
+          <ul class="tags">
+            <li>Java Full Stack</li>
+            <li>Spring Boot</li>
+            <li>JPA</li>
+            <li>MySQL</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost"
+              href="https://github.com/PrathameshJadhav30/Weather-App-Using-Java-Full-Stack" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card project-card">
+        <img src="assets/images/DairyIQ.png" alt="Screenshot of DairyIQ AI-Driven Feed Cost Prediction Tool"
+          class="card-img" loading="lazy">
+        <div class="card-body">
+          <h3>DairyIQ — AI-Driven Feed Cost Prediction & Crop Planning System</h3>
+          <p>Python ML application optimizing feed cost using linear programming, Flask web app with HTML, CSS, JS, and
+            API integration.</p> <br>
+          <ul class="tags">
+            <li>Python</li>
+            <li>ML</li>
+            <li>Optimization</li>
+            <li>Flask</li>
+            <li>HTML/CSS/JS</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost" href="https://github.com/PrathameshJadhav30/DairyIQ" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="card project-card">
+        <img src="assets/images/BookMyShow.png" alt="Screenshot of Book My Show Backend" class="card-img"
+          loading="lazy">
+        <div class="card-body">
+          <h3>Book My Show — Backend Design</h3>
+          <p>Java Full Stack backend using Spring Boot, JPA, Lombok, and MySQL for ticket booking management system.</p> <br>
+          <ul class="tags">
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>JPA</li>
+            <li>MySQL</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost"
+              href="https://github.com/PrathameshJadhav30/SPARK-BATCH-4.0-Java-Full-Stack-/tree/main/16-BookMyShow-BackEnd"
+              target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5 (New Project Added) -->
+      <article class="card project-card">
+        <img src="assets/images/SmartChargePro.png" alt="Screenshot of SmartCharge-Pro EV Charging Optimization Project"
+          class="card-img" loading="lazy">
+        <div class="card-body">
+          <h3>SmartCharge-Pro — Smart EV Charging Prediction & Optimization</h3>
+          <p>Machine Learning project for predicting EV charging demand and optimizing scheduling. Flask web app
+            integrating data preprocessing, ML models, and visualization dashboards for energy-efficient charging
+            solutions.</p> <br>
+          <ul class="tags">
+            <li>Python</li>
+            <li>ML</li>
+            <li>Data Preprocessing</li>
+            <li>Flask</li>
+            <li>HTML/CSS/JS</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost"
+              href="https://github.com/PrathameshJadhav30/SmartCharge-Pro-Smart-EV-Charging-Prediction-Optimization"
+              target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 6 -->
+      <article class="card project-card">
+        <img src="assets/images/AIResumeAnalyzer.png" alt="Screenshot of AI Resume Analyzer" class="card-img"
+          loading="lazy">
+        <div class="card-body">
+          <h3>AI Resume Analyzer</h3>
+          <p>Python tool analyzing resumes using AI and Python libraries for extracting key skills and evaluating
+            candidates.</p> <br>
+          <ul class="tags">
+            <li>Python</li>
+            <li>AI</li>
+            <li>Python Libraries</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost" href="https://github.com/PrathameshJadhav30/AI-Resume-Analyzer"
+              target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 7 -->
+      <article class="card project-card">
+        <img src="assets/images/AgriTechAssist.png" alt="Screenshot of AgriTech Assist Web App" class="card-img"
+          loading="lazy">
+        <div class="card-body">
+          <h3>AgriTech-Assist</h3>
+          <p>ML and Deep Learning-based web app built with Python, Flask, HTML, CSS, and JS for AI-driven crop
+            recommendations.</p> <br>
+          <ul class="tags">
+            <li>ML</li>
+            <li>Python</li>
+            <li>Deep Learning</li>
+            <li>Flask</li>
+            <li>HTML/CSS/JS</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost" href="https://github.com/PrathameshJadhav30/AgriTech-Assist" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 8 -->
+      <article class="card project-card">
+        <img src="assets/images/PDFKnowledgeHub.png" alt="Screenshot of PDF Knowledge Hub Project" class="card-img"
+          loading="lazy">
+        <div class="card-body">
+          <h3>PDF Knowledge Hub Project</h3>
+          <p>Python AI application leveraging APIs and Python libraries to extract, search, and manage knowledge from
+            PDFs efficiently.</p> <br>
+          <ul class="tags">
+            <li>Python</li>
+            <li>AI</li>
+            <li>Python Libraries</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost" href="https://github.com/PrathameshJadhav30/PDF-Knowledge-Hub-Project"
+              target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 9 -->
+      <article class="card project-card">
+        <img src="assets/images/PlacementPrediction.png" alt="Screenshot of Placement Prediction Using ML WebApp"
+          class="card-img" loading="lazy">
+        <div class="card-body">
+          <h3>Placement Prediction Using ML WebApp</h3>
+          <p>Machine learning models integrated into a web app built with HTML, CSS, JS, and Flask for predicting
+            placement outcomes.</p> <br>
+          <ul class="tags">
+            <li>ML</li>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>HTML/CSS/JS</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost"
+              href="https://github.com/PrathameshJadhav30/Placement-Prediction-Using-ML-WebApp" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 10 -->
+      <article class="card project-card">
+        <img src="assets/images/TwitterSentiment.png" alt="Screenshot of Twitter Sentiment Analysis ML Project"
+          class="card-img" loading="lazy">
+        <div class="card-body">
+          <h3>Twitter Sentiment Analysis ML</h3>
+          <p>Python machine learning project analyzing sentiment from tweets using NLP and ML libraries.</p> <br>
+          <ul class="tags">
+            <li>Python</li>
+            <li>ML</li>
+            <li>NLP</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost" href="https://github.com/PrathameshJadhav30/Twitter-Sentiment-Analysis-ML"
+              target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 11 -->
+      <article class="card project-card">
+        <img src="assets/images/CGPASGPA.png" alt="Screenshot of CGPA SGPA Calculator Project" class="card-img"
+          loading="lazy">
+        <div class="card-body">
+          <h3>CGPA & SGPA Calculator Project</h3>
+          <p>Web app for calculating CGPA & SGPA built with HTML, CSS, and JavaScript for interactive grade computation.
+          </p> <br>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost" href="https://github.com/PrathameshJadhav30/CGPA-SGPA-Calculator-Project"
+              target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 12 -->
+      <article class="card project-card">
+        <img src="assets/images/HealthcareChatbot.png" alt="Screenshot of Healthcare Chatbot Project" class="card-img"
+          loading="lazy">
+        <div class="card-body">
+          <h3>Healthcare Chatbot for Disease Analysis & Doctor Consultation Prediction</h3>
+          <p>Python-based chatbot using ML & AI to predict diseases and recommend doctor consultations interactively.
+          </p> <br>
+          <ul class="tags">
+            <li>Python</li>
+            <li>ML</li>
+            <li>AI</li>
+          </ul>
+          <div class="card-footer">
+            <a class="github-cta btn ghost"
+              href="https://github.com/PrathameshJadhav30/HEALTHCARE-CHATBOT-FOR-DOCTOR-CONSULTATION-USING-PYTHON"
+              target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- Skills Section -->
+<section id="skills" class="section container">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+
+    <div class="skill-domain">
+      <h4><i class="fas fa-code"></i> Programming Languages</h4>
+      <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>C</li>
+        <li>C++</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+
+    <div class="skill-domain">
+      <h4><i class="fas fa-laptop-code"></i> Frontend Technologies</h4>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React.js</li>
+      </ul>
+    </div>
+
+    <div class="skill-domain">
+      <h4><i class="fas fa-layer-group"></i> Java Full Stack</h4>
+      <ul>
+        <li>Core Java</li>
+        <li>OOP Principles</li>
+        <li>Advanced Java</li>
+        <li>JDBC</li>
+        <li>Servlets</li>
+        <li>Spring Core</li>
+        <li>Spring Boot</li>
+        <li>Spring REST API</li>
+        <li>Spring Data JPA</li>
+        <li>Spring Security</li>
+        <li>WebSockets</li>
+        <li>Microservices</li>
+        <li>Docker</li>
+        <li>Kafka</li>
+        <li>Postman</li>
+      </ul>
+    </div>
+
+    <div class="skill-domain">
+      <h4><i class="fas fa-robot"></i> Machine Learning & AI</h4>
+      <ul>
+        <li>Machine Learning</li>
+        <li>Artificial Intelligence</li>
+        <li>Deep Learning</li>
+        <li>Computer Vision</li>
+      </ul>
+    </div>
+
+    <div class="skill-domain">
+      <h4><i class="fas fa-chart-line"></i> Data Analytics & Visualization</h4>
+      <ul>
+        <li>Data Analytics</li>
+        <li>Power BI</li>
+        <li>Data Cleaning</li>
+        <li>Exploratory Data Analysis (EDA)</li>
+      </ul>
+    </div>
+
+    <div class="skill-domain">
+      <h4><i class="fas fa-database"></i> ML / Data Libraries</h4>
+      <ul>
+        <li>NumPy</li>
+        <li>Pandas</li>
+        <li>Scikit-learn</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>OpenCV</li>
+        <li>TensorFlow</li>
+      </ul>
+    </div>
+
+    <div class="skill-domain">
+      <h4><i class="fas fa-tools"></i> Tools & IDEs</h4>
+      <ul>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>VS Code</li>
+        <li>IntelliJ IDEA</li>
+        <li>Jupyter Notebook</li>
+        <li>Google Colab</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+
+    <div class="skill-domain">
+      <h4><i class="fas fa-book"></i> CS Fundamentals</h4>
+      <ul>
+        <li>Data Structures & Algorithms</li>
+        <li>DBMS</li>
+        <li>OOPs</li>
+        <li>Operating Systems</li>
+      </ul>
+    </div>
+
+    <div class="skill-domain">
+      <h4><i class="fas fa-users"></i> Soft Skills</h4>
+      <ul>
+        <li>Teamwork</li>
+        <li>Leadership</li>
+        <li>Communication</li>
+        <li>Adaptability</li>
+        <li>Problem-Solving</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="section container">
+    <h2><i class="fas fa-award"></i> Certificates & Achievements</h2>
+
+    <ul class="certificates-list">
+      <!-- Certificates -->
+      <li><i class="fas fa-certificate"></i> C++ Programming — CODETECH</li>
+      <li><i class="fas fa-certificate"></i> C Programming — Udemy</li>
+      <li><i class="fas fa-certificate"></i> Java — Scaler</li>
+      <li><i class="fas fa-certificate"></i> DBMS, CN, OS, JavaScript — Scaler</li>
+      <li><i class="fas fa-certificate"></i> AWS Cloud Foundations — AWS Academy</li>
+      <li><i class="fas fa-certificate"></i> Cloud Computing / Distributed Systems — NPTEL</li>
+      <li><i class="fas fa-certificate"></i> Python for Data Science — NSDC</li>
+      <li><i class="fas fa-certificate"></i> Power BI for Beginners — Simplilearn</li>
+      <li><i class="fas fa-certificate"></i> Innovation & Entrepreneurship — IIT Bombay</li>
+      <li><i class="fas fa-certificate"></i> Fundamentals of Machine Learning — Microsoft</li>
+    </ul>
+
+    <h3 class="achievements-heading"><i class="fas fa-trophy"></i> Achievements</h3>
+    <ul class="certificates-list ">
+      <li><i class="fas fa-medal"></i> Academic Topper — First | Second | Third Year</li>
+      <li><i class="fas fa-code"></i> LeetCode 250-Day Streak — Problem-Solving Excellence</li>
+      <li><i class="fab fa-github"></i> Consistent Coding Habit — 265-Day GitHub Streak</li>
+      <li><i class="fas fa-laptop-code"></i> Codeclash Hackathon — Top 221 Rank</li>
+      <li><i class="fas fa-trophy"></i> 3rd Prize — ZEST’25 Kabaddi, Pune</li>
+      <li><i class="fas fa-trophy"></i> 4th Prize — State-Level Kabaddi, Pune</li>
+    </ul>
+  </section>
+
+  <div class="certificates-cta">
+    <a class="btn ghost" href="https://github.com/PrathameshJadhav30/MY-CERTIFICATIONS" target="_blank"
+      rel="noopener noreferrer">View All Certificates</a>
+  </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <!-- Contact Section -->
+  <section id="contact" class="section container">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Email</h4>
+        <p><a href="mailto:prathameshaj2004@gmail.com">prathameshaj2004@gmail.com</a></p>
+      </div>
+      <div class="contact-card">
+        <h4>Phone</h4>
+        <p><a href="tel:+919665484038">+91 9665484038</a></p>
+      </div>
+      <div class="contact-card">
+        <h4>Profiles</h4>
+        <p>
+          <a href="https://www.linkedin.com/in/prathamesh-jadhav-b30490259" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a> •
+          <a href="https://github.com/PrathameshJadhav30" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> GitHub
+          </a> <br>
+          •
+          <a href="https://www.instagram.com/prathamesh_jadhav_30/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i> Instagram
+          </a> •
+          <a href="https://leetcode.com/u/prathamesh_jadhav3011/" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-code"></i> LeetCode
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Greeting Popup-->
+  <div class="greeting" id="greetingPopup" aria-modal="true" role="dialog">
+    <div class="greeting-card">
+      <h2>Welcome to my Portfolio!</h2>
+      <h3>I'm Prathamesh</h3>
+      <p>Explore my projects, skills, and achievements.</p>
+      <button class="btn primary close-greeting-btn">Got It!</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Prathamesh Jadhav. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+
+</html>
