@@ -83,17 +83,21 @@ function setupNavigation() {
     // Toggle logic
     navToggle.addEventListener('click', () => {
         const isExpanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-        siteNav.classList.toggle('open');
+        
+        siteNav.classList.toggle('active'); 
+        
         navToggle.setAttribute('aria-expanded', !isExpanded);
         
         // lock body scroll when nav is open
-        document.body.classList.toggle('nav-open', siteNav.classList.contains('open'));
+        document.body.classList.toggle('nav-open', siteNav.classList.contains('active'));
     });
 
     // Close nav when a link is clicked 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            siteNav.classList.remove('open');
+            
+            siteNav.classList.remove('active'); 
+            
             navToggle.setAttribute('aria-expanded', 'false');
             document.body.classList.remove('nav-open');
         });
