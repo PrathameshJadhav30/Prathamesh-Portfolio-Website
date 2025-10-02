@@ -78,26 +78,27 @@ function setupThemeSwitcher() {
 function setupNavigation() {
     const navToggle = document.getElementById('navToggle');
     const siteNav = document.getElementById('siteNav');
-    const navLinks = siteNav.querySelectorAll('a');
+    const navUl = siteNav.querySelector('ul'); 
+    
+    const navLinks = navUl.querySelectorAll('a');
 
     // Toggle logic
     navToggle.addEventListener('click', () => {
         const isExpanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
         
-        siteNav.classList.toggle('active'); 
+        // Apply 'active' class to the UL, which is what the CSS targets
+        navUl.classList.toggle('active'); 
         
         navToggle.setAttribute('aria-expanded', !isExpanded);
         
-        // lock body scroll when nav is open
-        document.body.classList.toggle('nav-open', siteNav.classList.contains('active'));
+        // Lock body scroll when nav is open
+        document.body.classList.toggle('nav-open', navUl.classList.contains('active'));
     });
 
     // Close nav when a link is clicked 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            
-            siteNav.classList.remove('active'); 
-            
+            navUl.classList.remove('active'); 
             navToggle.setAttribute('aria-expanded', 'false');
             document.body.classList.remove('nav-open');
         });
