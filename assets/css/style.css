@@ -828,7 +828,7 @@ footer {
     /* About Section */
     .about-grid {
         grid-template-columns: 1fr;
-        text-align: left; /* CHANGED: Reset to left-align for paragraph readability */
+        text-align:justify; /* CHANGED: Reset to left-align for paragraph readability */
     }
 
     .about-grid p {
@@ -836,7 +836,7 @@ footer {
         line-height: 1.7;
         color: var(--clr-text-secondary);
         margin-bottom: 1rem;
-        text-align: left; /* Ensure paragraph text is left-aligned */
+        text-align: justify; /* Ensure paragraph text is left-aligned */
     }
 
     .about-grid .quick-info {
