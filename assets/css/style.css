@@ -774,7 +774,8 @@ footer {
     /* Nav Toggle (Hamburger) Styling */
     .nav-toggle {
         display: block;
-        position: static; /* Flow naturally within .top-controls */
+        /* Ensures it positions correctly next to theme switch */
+        position: static; 
         right: auto;
         top: auto;
         font-size: 1.8rem;
@@ -786,13 +787,18 @@ footer {
     /* Top Controls (Grouping hamburger and theme switch) */
     .top-controls {
         display: flex;
-        /* Reduced gap for smaller space between hamburger and theme switch */
-        gap: 0.8rem; 
+        /* Smaller gap to bring them closer */
+        gap: 0.4rem; /* Adjusted from 0.8rem to 0.4rem for a very small space */
         align-items: center;
         width: auto; 
         margin-left: 0; /* Remove desktop margin */
         margin-top: 0; 
         order: 2; 
+    }
+    
+    /* Hide GitHub button on mobile */
+    .top-controls .github-cta {
+        display: none;
     }
 
     header nav ul {
@@ -824,11 +830,6 @@ footer {
     header nav ul li a {
         font-size: 1rem;
         font-weight: 500;
-    }
-
-    /* Hide GitHub button on mobile */
-    .top-controls .github-cta {
-        display: none;
     }
     
     /* --- CONTENT SECTION FIXES --- */
