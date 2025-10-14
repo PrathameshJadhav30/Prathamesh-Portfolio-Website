@@ -74,7 +74,7 @@ section {
     flex-grow: 1;
 }
 
-/* Experience  */
+/* Experience  */
 .company-name {
     font-size: 1.1rem;
     color: #06b6d4;
@@ -118,7 +118,7 @@ section {
 }
 
 
-/* TYPOGRAPHY & UTILITIES  */
+/* TYPOGRAPHY & UTILITIES  */
 
 h2 {
     font-size: 2.2rem;
@@ -170,7 +170,7 @@ h2 {
 }
 
 
-/* HEADER & NAVIGATION   */
+/* HEADER & NAVIGATION  */
 
 header {
     background: var(--clr-bg-secondary);
@@ -284,7 +284,7 @@ header nav ul li a:hover:after {
 }
 
 
-/* Top Controls  */
+/* Top Controls  */
 .top-controls {
     display: flex;
     gap: var(--space-md);
@@ -355,7 +355,7 @@ header nav ul li a:hover:after {
     transform: translateX(22px);
 }
 
-/* HERO SECTION  */
+/* HERO SECTION  */
 
 .hero {
     display: flex;
@@ -729,7 +729,7 @@ footer {
     transition: background var(--transition-fast), color var(--transition-fast);
 }
 
-/* 8. RESPONSIVE DESIGN  */
+/* 8. RESPONSIVE DESIGN  */
 
 @media (max-width: 768px) {
     h1 {
@@ -756,27 +756,43 @@ footer {
         height: 150px;
     }
 
-    /* --- MOBILE HEADER FIXES --- */
+    /* --- MOBILE HEADER FIXES (Navigation/Dark Mode Positioning Fixed) --- */
     header .container {
-        /* Reverted flex-wrap and adjusted padding */
         flex-wrap: nowrap;
         padding: 0.8rem 5%; 
+        /* Added to push brand left and controls right */
+        justify-content: space-between; 
     }
 
     header .brand {
         font-size: 1.5rem;
         text-align: left;
-        flex: 1; /* Allow logo to take necessary space */
-        margin-bottom: 0; /* Removed margin that was causing a break */
+        flex: 1; 
+        margin-bottom: 0; 
     }
 
+    /* Nav Toggle (Hamburger) Styling */
     .nav-toggle {
         display: block;
-        position: relative; /* Changed from absolute to flow with top-controls */
+        position: static; /* Flow naturally within .top-controls */
         right: auto;
         top: auto;
         font-size: 1.8rem;
         cursor: pointer;
+        z-index: 200;
+        align-self: center; 
+    }
+    
+    /* Top Controls (Grouping hamburger and theme switch) */
+    .top-controls {
+        display: flex;
+        /* Reduced gap for smaller space between hamburger and theme switch */
+        gap: 0.8rem; 
+        align-items: center;
+        width: auto; 
+        margin-left: 0; /* Remove desktop margin */
+        margin-top: 0; 
+        order: 2; 
     }
 
     header nav ul {
@@ -784,12 +800,12 @@ footer {
         flex-direction: column;
         align-items: center;
         background: var(--clr-bg-secondary);
-        position: fixed; /* Changed from absolute to fixed to cover viewport below header */
-        top: 4.5rem; /* Adjust based on your header height */
+        position: fixed; 
+        top: 4.5rem; 
         left: 0;
         right: 0;
         width: 100%;
-        min-height: calc(100vh - 4.5rem); /* Cover the remaining screen height */
+        min-height: calc(100vh - 4.5rem); 
         padding: 2rem 0;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -814,21 +830,13 @@ footer {
     .top-controls .github-cta {
         display: none;
     }
-
-    /* Keep Dark Mode toggle aligned to the right, next to the hamburger */
-    .top-controls {
-        justify-content: flex-end;
-        width: auto; /* Take only necessary width */
-        margin-top: 0; /* Removed margin-top */
-        order: 2; /* Ensures it is visually placed after the brand/logo */
-    }
     
     /* --- CONTENT SECTION FIXES --- */
 
     /* About Section */
     .about-grid {
         grid-template-columns: 1fr;
-        text-align:justify; /* CHANGED: Reset to left-align for paragraph readability */
+        text-align: left; /* CHANGED: Reset to left-align for paragraph readability */
     }
 
     .about-grid p {
