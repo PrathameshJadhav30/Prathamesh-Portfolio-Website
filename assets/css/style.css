@@ -718,50 +718,116 @@ footer {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     section {
-        padding: 3rem 0;
+        padding: 3rem 1rem;
     }
 
+    /* Hero Section */
     .hero {
         flex-direction: column;
         text-align: center;
         padding: 6rem 0 4rem;
     }
 
-    .hero-left {
-        flex: none;
+    .hero-left .avatar {
+        width: 150px;
+        height: 150px;
     }
 
-    .hero-right {
-        min-width: unset;
+    /* Header */
+    header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 0;
+    }
+
+    header .brand {
+        font-size: 1.5rem;
+        text-align: left;
+        flex: 1 1 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        font-size: 1.8rem;
+        cursor: pointer;
     }
 
     header nav ul {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        background: var(--clr-bg-secondary);
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--clr-bg-secondary);
-        flex-direction: column;
-        padding: 1.5rem 0;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease-in-out;
+        z-index: 99;
     }
 
     header nav ul.active {
         display: flex;
     }
 
-    .nav-toggle {
-        display: block;
-       
+    header nav ul li {
+        margin: 0.7rem 0;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    /* Hide GitHub button on mobile */
+    .top-controls .github-cta {
+        display: none;
+    }
+
+    /* Keep only dark mode toggle */
+    .top-controls {
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.8rem;
+    }
+
+    /* About Section */
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-grid p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--clr-text-secondary);
+        margin-bottom: 1rem;
+    }
+
+    .about-grid .quick-info {
+        margin-top: 1.5rem;
+        padding-left: 0;
+    }
+
+    .about-grid .quick-info li {
+        list-style: none;
+        margin: 0.5rem 0;
+        color: var(--clr-text-secondary);
     }
 }
