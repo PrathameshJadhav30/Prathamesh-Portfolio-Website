@@ -74,7 +74,7 @@ section {
     flex-grow: 1;
 }
 
-/* Experience  */
+/* Experience  */
 .company-name {
     font-size: 1.1rem;
     color: #06b6d4;
@@ -84,6 +84,8 @@ section {
     margin-top: 5px;
     margin-bottom: 10px;
     list-style: disc inside;
+    /* ADDED: Ensure list has room for bullets, especially on mobile */
+    padding-left: 1.5rem;
 }
 
 /* Achivements in Certificates Section */
@@ -116,7 +118,7 @@ section {
 }
 
 
-/* TYPOGRAPHY & UTILITIES  */
+/* TYPOGRAPHY & UTILITIES  */
 
 h2 {
     font-size: 2.2rem;
@@ -155,6 +157,7 @@ h2 {
 }
 
 .btn.ghost:hover {
+    /* Updated rgba usage for color transition */
     background: rgba(var(--clr-accent-secondary), 0.1);
     color: var(--clr-text-primary);
     transform: translateY(-2px);
@@ -167,7 +170,7 @@ h2 {
 }
 
 
-/* HEADER & NAVIGATION   */
+/* HEADER & NAVIGATION   */
 
 header {
     background: var(--clr-bg-secondary);
@@ -178,24 +181,33 @@ header {
     transition: background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
+/* UPDATED: Header container for clean flow across all sizes */
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 5%; /* Use percentage for consistent padding */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; /* Prevent wrapping on desktop */
 }
 
 header .brand {
     color: var(--clr-accent-secondary);
     font-weight: 800;
     font-size: 1.7rem;
+    flex-grow: 1; /* Allow logo to take space */
+    text-align: left;
 }
 
 header nav {
+    /* Adjust width to auto, letting content define space on desktop */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    width: auto; 
+    flex-grow: 1; 
 }
 
 header nav ul {
@@ -267,16 +279,18 @@ header nav ul li a:hover:after {
     position: absolute;
     left: 0;
     top: 0.1rem;
-    color: var(--clr-accent);
+    color: var(--clr-accent-secondary); /* Corrected variable name, assuming accent-secondary is the desired color */
     font-size: 0.9rem;
 }
 
 
-/* Top Controls  */
+/* Top Controls  */
 .top-controls {
     display: flex;
     gap: var(--space-md);
     align-items: center;
+    /* Added to align on the right on desktop, alongside nav */
+    margin-left: var(--space-md);
 }
 
 /* Desktop: Align controls to the right of the nav links */
@@ -341,7 +355,7 @@ header nav ul li a:hover:after {
     transform: translateX(22px);
 }
 
-/* HERO SECTION  */
+/* HERO SECTION  */
 
 .hero {
     display: flex;
@@ -446,13 +460,14 @@ header nav ul li a:hover:after {
 
 .about-grid .quick-info {
     margin-top: var(--space-md);
-    padding-left: 1.5rem;
+    /* Removed padding-left: 1.5rem here to control on mobile */
 }
 
 .about-grid .quick-info li {
     margin-bottom: 0.5rem;
     list-style: disc;
     color: var(--clr-text-secondary);
+    padding-left: 1.5rem; /* Ensure indentation for bullet points */
 }
 
 .about-grid .quick-info li strong {
@@ -714,7 +729,7 @@ footer {
     transition: background var(--transition-fast), color var(--transition-fast);
 }
 
-/* 8. RESPONSIVE DESIGN  */
+/* 8. RESPONSIVE DESIGN  */
 
 @media (max-width: 768px) {
     h1 {
@@ -741,26 +756,25 @@ footer {
         height: 150px;
     }
 
-    /* Header */
+    /* --- MOBILE HEADER FIXES --- */
     header .container {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.8rem 0;
+        /* Reverted flex-wrap and adjusted padding */
+        flex-wrap: nowrap;
+        padding: 0.8rem 5%; 
     }
 
     header .brand {
         font-size: 1.5rem;
         text-align: left;
-        flex: 1 1 100%;
-        margin-bottom: 0.5rem;
+        flex: 1; /* Allow logo to take necessary space */
+        margin-bottom: 0; /* Removed margin that was causing a break */
     }
 
     .nav-toggle {
         display: block;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
+        position: relative; /* Changed from absolute to flow with top-controls */
+        right: auto;
+        top: auto;
         font-size: 1.8rem;
         cursor: pointer;
     }
@@ -770,12 +784,13 @@ footer {
         flex-direction: column;
         align-items: center;
         background: var(--clr-bg-secondary);
-        position: absolute;
-        top: 100%;
+        position: fixed; /* Changed from absolute to fixed to cover viewport below header */
+        top: 4.5rem; /* Adjust based on your header height */
         left: 0;
         right: 0;
         width: 100%;
-        padding: 1rem 0;
+        min-height: calc(100vh - 4.5rem); /* Cover the remaining screen height */
+        padding: 2rem 0;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.3s ease-in-out;
@@ -800,17 +815,20 @@ footer {
         display: none;
     }
 
-    /* Keep only dark mode toggle */
+    /* Keep Dark Mode toggle aligned to the right, next to the hamburger */
     .top-controls {
-        justify-content: center;
-        width: 100%;
-        margin-top: 0.8rem;
+        justify-content: flex-end;
+        width: auto; /* Take only necessary width */
+        margin-top: 0; /* Removed margin-top */
+        order: 2; /* Ensures it is visually placed after the brand/logo */
     }
+    
+    /* --- CONTENT SECTION FIXES --- */
 
     /* About Section */
     .about-grid {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left; /* CHANGED: Reset to left-align for paragraph readability */
     }
 
     .about-grid p {
@@ -818,6 +836,7 @@ footer {
         line-height: 1.7;
         color: var(--clr-text-secondary);
         margin-bottom: 1rem;
+        text-align: left; /* Ensure paragraph text is left-aligned */
     }
 
     .about-grid .quick-info {
@@ -826,8 +845,30 @@ footer {
     }
 
     .about-grid .quick-info li {
-        list-style: none;
+        list-style: disc; /* CHANGED: Set to use disc list style */
         margin: 0.5rem 0;
         color: var(--clr-text-secondary);
+        padding-left: 1.5rem; /* Added indentation for list bullets */
+    }
+
+    /* Experience Section - Ensure lists are legible */
+    .experience ul {
+        padding-left: 1.5rem; /* Ensure bullets are visible */
+    }
+
+    /* Achievements Section - Force vertical stacking */
+    .achievements-list {
+        text-align: left; /* CHANGED: Left-align list for better flow */
+        padding: 0;
+        margin: 1rem auto;
+        max-width: 400px; /* Constrain list width for clean look */
+    }
+
+    .achievements-list li {
+        display: block; /* CHANGED: Forces list items to stack vertically */
+        margin: 0.7rem 0; /* Add vertical spacing */
+        padding: 0.5rem 1rem;
+        background: var(--clr-bg-card); /* Optional: Add subtle background for definition */
+        border-radius: 0.5rem;
     }
 }
