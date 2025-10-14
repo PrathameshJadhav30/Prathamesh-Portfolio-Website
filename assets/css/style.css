@@ -158,7 +158,8 @@ h2 {
 
 .btn.ghost:hover {
     /* Updated rgba usage for color transition */
-    background: rgba(var(--clr-accent-secondary), 0.1);
+    /* NOTE: Requires a variable definition for color in RGBA format or a JS solution for dynamic BG opacity */
+    background: rgba(var(--clr-accent-secondary), 0.1); 
     color: var(--clr-text-primary);
     transform: translateY(-2px);
 }
@@ -199,10 +200,11 @@ header .brand {
     font-size: 1.7rem;
     flex-shrink: 0; /* Prevents logo from shrinking unnecessarily */
     text-align: left;
+    margin-right: var(--space-md); /* Add spacing between brand and nav/controls */
 }
 
 header nav {
-    /* Allow navigation area to fill space on desktop, pushing controls right */
+    /* On desktop, this flex-grows to push .top-controls to the far right */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -285,20 +287,33 @@ header nav ul li a:hover:after {
 
 
 /* Top Controls  */
+/* MODIFIED: Ensure this element is always on the far right of the content flow */
 .top-controls {
     display: flex;
     gap: var(--space-md);
     align-items: center;
-    /* On desktop, align controls to the right of the nav links */
-    margin-left: var(--space-md);
+    /* Pushes controls to the far right on desktop, right after the nav links */
+    margin-left: auto; 
+    flex-shrink: 0; /* Prevents shrinking */
 }
 
 /* Desktop: Align controls to the right of the nav links */
 @media (min-width: 769px) {
+    /* Hide the mobile hamburger button on desktop */
+    .nav-toggle {
+        display: none;
+    }
+    
+    /* Nav links should sit just before the controls, taking up space */
     header nav ul {
         flex-grow: 1;
         justify-content: flex-end;
         margin-right: 2rem;
+    }
+    
+    /* Re-add desktop margin for GitHub CTA */
+    .top-controls .github-cta {
+        display: inline-block;
     }
 }
 
@@ -460,7 +475,6 @@ header nav ul li a:hover:after {
 
 .about-grid .quick-info {
     margin-top: var(--space-md);
-    /* Removed padding-left: 1.5rem here to control on mobile */
 }
 
 .about-grid .quick-info li {
@@ -767,23 +781,23 @@ footer {
     header .brand {
         font-size: 1.5rem;
         text-align: left;
-        flex-shrink: 0; /* Ensures brand keeps its width */
+        flex-shrink: 0; 
         margin-bottom: 0; 
+        margin-right: var(--space-md);
     }
 
-    /* Top Controls (Grouping hamburger and theme switch) */
+    /* Top Controls (Grouping dark mode toggle and hamburger) */
     .top-controls {
+        /* Ensures the group is on the far right */
+        margin-left: auto;
         display: flex;
-        /* Aligns dark mode switch and hamburger icon next to each other */
         gap: 0.4rem; 
         align-items: center;
         width: auto; 
-        /* Remove desktop margins */
-        margin-left: 0;
         margin-top: 0; 
     }
     
-    /* Nav Toggle (Hamburger) Styling */
+    /* Nav Toggle (Hamburger) Styling - MUST be visible on mobile */
     .nav-toggle {
         display: block;
         position: static; 
@@ -800,10 +814,9 @@ footer {
 
     /* Mobile Navigation Menu Behavior */
     header nav {
-        /* Must allow nav to occupy space on mobile */
         flex-grow: 0;
         width: 100%;
-        position: static; /* Prevent issues with fixed positioning on mobile when closed */
+        position: static; 
     }
 
     header nav ul {
